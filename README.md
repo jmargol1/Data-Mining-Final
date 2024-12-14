@@ -6,8 +6,8 @@ The dataset for this project is called Depression Survey/Dataset for Analysis. I
 
 The main cleaning for this code can be found in `Cleaning_Code.py`. To run this file, you must have the kaggle dataset saved in the same directory as this file with the name "final_depression_dataset_1.csv". You must also install the following packages:
 
-*numpy
-*pandas
-*matplotlib
-*sklearn
+* numpy
+* pandas
+* matplotlib
+* sklearn
 
