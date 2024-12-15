@@ -52,7 +52,12 @@ The code used to build and run the backwards feature selection wrapper method fo
 Running this file will print the following in the console:
 
 * Model metrics for each step of feature elimination
-* * Number of Features Remaining
+  * Number of Features Remaining
   * Mean CV Fold Accuracy
   * Test Accuracy
   * Test F1-Score
+ 
+Running this file will also produce and save the following images to the same directory:
+
+* "WrapperOutputs.png" --> A line plot showing the movement of Test Accuracy and Test F1-Score at each number of parameters remaining
+* "WrapperImportance.png" --> A table outlining the feature eliminated at each step, along with the number of features remaining, and the Test Accuracy and F1-Score for each model.
