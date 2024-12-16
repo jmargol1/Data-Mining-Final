@@ -9,7 +9,7 @@ The main cleaning for this code can be found in `Cleaning_Code.py`. To run this 
 * numpy
 * pandas
 * matplotlib
-* sklearn
+* scikit_klearn
 
 
 
@@ -29,80 +29,31 @@ It will also produce and save the following bar plots to the same directory:
 
 Naive Bayes Classifier for Predicting Depression
 Project Overview
-This project uses a Naive Bayes Classifier to predict depression based on various features like age, profession, sleep duration, and stress levels. We implemented Gaussian Naive Bayes for numerical data and performed a step-by-step analysis to improve the model's performance.
+This portion uses a Naive Bayes Classifier to predict depression based on various features like age, profession, sleep duration, and stress levels. We implemented Gaussian Naive Bayes for numerical data and performed a step-by-step analysis to improve the model's performance.
 
-Files in the Project
-final_project.py: The Python script that runs the model and produces the results.
-X_train.csv: Training data features.
-y_train.csv: Training data labels.
-X_test.csv: Testing data features.
-y_test.csv: Testing data labels.
-README.md: Instructions for running and understanding the project.
+The code used to build and run the backwards feature selection wrapper method for our random forest model can be found in the file `final_project.py`. To run this code, you must first run the `Cleaning_Code.py` file, and ensure that the datasets produced from that file are all saved in the same directory as `final_project.py`. This includes the following files:
+
+* "X_train.csv" (The input parameters for the training dataset)
+* "y_train.csv" (The depression classifications for the training dataset)
+* "X_test.csv" (The input parameters for the testing dataset)
+* "y_test.csv" (The depression classifications for the testing dataset)
+
+You must also install the following additional package:
+
+* seaborn
+  
 Visual Outputs: Confusion matrix, ROC curve, feature importance, and correlation matrix graphs.
-Setup Instructions
-Install Dependencies
-Ensure the following libraries are installed on your system:
 
-bash
-Copy code
-pip install pandas scikit-learn matplotlib seaborn
-Run the Script
-Place all the required files (X_train.csv, y_train.csv, X_test.csv, y_test.csv) in the same directory as final_project.py. Run the script:
 
-bash
-Copy code
-python final_project.py
-Output
-The script will output the following:
 
-Top 15 important features using Mutual Information.
-A correlation matrix heatmap for the top features.
-Model performance metrics (Accuracy, Precision, Recall, F1-Score).
-A Confusion Matrix to show correct and incorrect predictions.
-An ROC Curve with the AUC score to measure overall performance.
-A Learning Curve to observe model behavior with different amounts of data.
-Steps in the Project
-Feature Selection
+Running the script will output the following:
 
-Why it’s done: To reduce unnecessary features and improve model accuracy.
-How: Mutual Information was used to identify the 15 most important features.
-Feature Correlation Analysis
-
-A heatmap was created to check correlations between features.
-This step confirms that features are not strongly correlated, which is good for Naive Bayes (assumes feature independence).
-Model Training
-
-Gaussian Naive Bayes was used, which assumes data follows a normal (Gaussian) distribution.
-Model Evaluation
-
-Confusion Matrix: Shows True Positives, True Negatives, False Positives, and False Negatives.
-ROC Curve and AUC: Measures how well the model separates classes.
-Learning Curve: Helps us understand how the model performs as we increase the training data size.
-Model Results
-Confusion Matrix:
-
-Shows that the model correctly predicts most "No Depression" cases but struggles with False Positives (predicting depression when it’s not).
-Precision and Recall:
-
-Precision for No Depression: 99%
-Recall for Depression Detected: 96%
-Observation: The model is better at identifying “No Depression” cases due to class imbalance.
-ROC Curve and AUC:
-
-AUC Score = 0.90, which means the model performs well in separating the two classes.
-Learning Curve:
-
-Shows how the model improves with more data. It highlights that increasing training data helps stabilize the accuracy.
-Observations
-Age and Profession (Student/Working) were the most significant features for predicting depression.
-The model performs well overall but struggles with False Positives, likely due to fewer examples of depression in the dataset.
-The AUC score of 0.90 confirms that the model can effectively separate “Depression” and “No Depression” classes.
-Future Improvements
-Handle class imbalance by oversampling techniques like SMOTE.
-Use additional models (e.g., Logistic Regression, Random Forest) for comparison.
-Perform hyperparameter tuning to optimize the Naive Bayes model.
-Conclusion
-This project demonstrates how a Naive Bayes Classifier can predict depression based on key features. The process included feature selection, visualization, model training, and evaluation. By focusing on the most important features and analyzing results through graphs and metrics, we identified the strengths and limitations of the model.
+* Top 15 important features using Mutual Information.
+* A correlation matrix heatmap for the top features.
+* Model performance metrics (Accuracy, Precision, Recall, F1-Score).
+* A Confusion Matrix to show correct and incorrect predictions.
+* An ROC Curve with the AUC score to measure overall performance.
+* A Learning Curve to observe model behavior with different amounts of data.
 
 ## KNN Model
 
@@ -323,6 +274,7 @@ print("classification report:\n",classification_rep)
 
 In conclusion, the KNN model was optimized using smote, wrapper-based feature selection, and gridsearchCV to address class imbalance and improve performance. The baseline model achieved 85.15 accuracy, with poor precision for class 1 (0.53). applying SMOTE balanced the classes, improving class 1 precision to 0.64, but overall accuracy dropped to 75.39% due to noise from synthetic data. Wrapper based feature selection identified key features (age, suicidal thoughts, working professional or student) and achieved the best accuracy of 88.67% significantly improving model performance. in comparison, gridsearchcv optimized hyperparameters but achieved a lower accuracy of 82.23%. Overall, combining wrapper-based feature selection with optimized hyperparameters yields the best results, while integrating SMOTE can further enhance class 1 (yes to depression) performance.
 ## Random Forest Full Model
+When utilizing Random forests
 
 The code used to build and run the random forest model with all 12 parameters can be found in the file `RandomForest.py`. To run this code, you must first run the `Cleaning_Code.py` file, and ensure that the datasets produced from that file are all saved in the same directory as `RandomForest.py`. You must also install the following package:
 
