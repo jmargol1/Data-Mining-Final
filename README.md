@@ -4,7 +4,7 @@
 
 The prevalence of depression as a leading mental health challenge underscores the need for innovative and effective approaches to early detection. Informed by decades of research, studies have shown that demographic factors, lifestyle choices, and environmental stressors play critical roles in influencing mental health outcomes. Our work seeks to build upon this foundation by leveraging predictive modeling techniques to assess depression risk factors. This study utilizes a comprehensive dataset encompassing variables such as age, academic and work pressures, and lifestyle habits, collected from over 2,500 individuals in India.
 
-The comprehensive report on this topic, outlining how we built our models and analysis of our results can be found in the `Project_Write_Up.docx` file.
+The comprehensive report on this topic, outlining how we built our models and analysis of our results can be found in the `Project_Write_Up.docx` file. Our concise presentation can be found in the `Depression_Slides.docx` file.
 
 ## Data Cleaning and Preprocessing
 
