@@ -2,6 +2,10 @@
 
 ## Introduction
 
+The prevalence of depression as a leading mental health challenge underscores the need for innovative and effective approaches to early detection. Informed by decades of research, studies have shown that demographic factors, lifestyle choices, and environmental stressors play critical roles in influencing mental health outcomes. Our work seeks to build upon this foundation by leveraging predictive modeling techniques to assess depression risk factors. This study utilizes a comprehensive dataset encompassing variables such as age, academic and work pressures, and lifestyle habits, collected from over 2,500 individuals in India.
+
+The comprehensive report on this topic, outlining how we built our models and analysis of our results can be found in the `Project_Write_Up.docx` file.
+
 ## Data Cleaning and Preprocessing
 
 The dataset for this project is called Depression Survey/Dataset for Analysis. It was put together by an anonymous research group and posted by Suman Sharma. It contains the depression survey information for 2,556 patients from all over India, with ages ranging from 18-60 years old. This dataset focuses mainly on lifestyle factors like `Dietary Habits` or `Working Professional or Student` to find connections to the target variable `Depression` which is a binary output, either diagnosed with depression and not.
