@@ -59,6 +59,14 @@ Running the script will output the following:
 
 The code used to build and run our K-Nearest Neighbors models can be found in the file `KNN.ipynb`. To run this code, you must first ensure that the following files are saved in the same directory as `KNN.ipynb`. 
 
+* "X_train_resamp.csv"
+* "y_train_resamp.csv"
+
+You must also first run the `Cleaning_Code.py` file, and ensure that the datasets produced from that file are all saved in the same directory as `KNN.ipynb`. This includes the following files:
+
+* "X_test.csv"
+* "y_test.csv"
+
 You must also install the following additional packages:
 
 * imb_learn
